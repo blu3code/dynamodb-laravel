@@ -15,17 +15,15 @@ AWS DynamoDB Eloquent ORM Driver
 $ composer require blu3code/dynamodb-laravel
 ```
 
-**2.** Create DynamoDB config file (config/dynamodb.php)
+**2.** Patch DynamoDB config file (config/database.php)
 
 ```php
-<?php
-
-return [
+'dynamodb' => [
     'key' => env('DYNAMODB_KEY_ID'),
     'secret' => env('DYNAMODB_ACCESS_KEY'),
     'region' => env('DYNAMODB_REGION'),
     'endpoint' => env('DYNAMODB_ENDPOINT'),
-];
+]
 ```
 
 Modify your environment:
